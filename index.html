@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Student Tools | Study Smarter
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🎓 Student Tools
+        </div>
+
+
+        <nav>
+
+            <a
+                href="#home"
+                data-i18n="nav_home">
+
+                Home
+
+            </a>
+
+
+            <a
+                href="#tools"
+                data-i18n="nav_tools">
+
+                Tools
+
+            </a>
+
+
+            <a
+                href="#why-us"
+                data-i18n="nav_why">
+
+                Why Us
+
+            </a>
+
+
+            <!-- LANGUAGE BUTTON -->
+
+            <button
+                id="language-toggle"
+                class="language-toggle"
+                onclick="toggleLanguage()"
+                aria-label="Change language">
+
+                🌐 AR
+
+            </button>
+
+
+            <!-- DARK MODE -->
+
+            <button
+                id="theme-toggle"
+                class="theme-toggle"
+                onclick="toggleTheme()"
+                aria-label="Toggle dark mode">
+
+                🌙
+
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section
+        id="home"
+        class="hero">
+
+        <div class="hero-content">
+
+
+            <div
+                class="hero-badge"
+                data-i18n="hero_badge">
+
+                ✨ Simple Tools for Better Studying
+
+            </div>
+
+
+            <h1>
+
+                <span data-i18n="hero_title">
+                    Everything Students Need
+                </span>
+
+                <span data-i18n="hero_title_second">
+                    in One Place
+                </span>
+
+            </h1>
+
+
+            <p data-i18n="hero_description">
+
+                Simple and useful tools to help you study,
+                organize your time, calculate your grades,
+                and stay on track.
+
+            </p>
+
+
+            <a
+                href="#tools"
+                class="main-button"
+                data-i18n="hero_button">
+
+                Explore Tools
+
+            </a>
+
+
+            <p
+                class="hero-note"
+                data-i18n="hero_note">
+
+                Free • Simple • Easy to Use
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TOOLS
+    ========================== -->
+
+    <section
+        id="tools"
+        class="tools-section">
+
+
+        <h2 data-i18n="tools_title">
+
+            Student Tools
+
+        </h2>
+
+
+        <p
+            class="section-description"
+            data-i18n="tools_description">
+
+            Choose a tool to make your study life easier.
+
+        </p>
+
+
+        <div class="tools-container">
+
+
+            <!-- =========================
+                 GPA
+            ========================== -->
+
+            <div class="tool-card">
+
+                <div class="tool-icon">
+                    🧮
+                </div>
+
+
+                <h3 data-i18n="gpa_title">
+
+                    GPA Calculator
+
+                </h3>
+
+
+                <p data-i18n="gpa_description">
+
+                    Calculate your GPA easily and keep track
+                    of your academic performance.
+
+                </p>
+
+
+                <button
+                    onclick="openTool('gpa')"
+                    data-i18n="open_tool">
+
+                    Open Tool
+
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 PERCENTAGE
+            ========================== -->
+
+            <div class="tool-card">
+
+                <div class="tool-icon">
+                    📊
+                </div>
+
+
+                <h3 data-i18n="percentage_title">
+
+                    Percentage Calculator
+
+                </h3>
+
+
+                <p data-i18n="percentage_description">
+
+                    Calculate percentages quickly for marks,
+                    grades, and everyday calculations.
+
+                </p>
+
+
+                <button
+                    onclick="openTool('percentage')"
+                    data-i18n="open_tool">
+
+                    Open Tool
+
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 POMODORO
+            ========================== -->
+
+            <div class="tool-card">
+
+                <div class="tool-icon">
+                    ⏱️
+                </div>
+
+
+                <h3 data-i18n="pomodoro_title">
+
+                    Pomodoro Timer
+
+                </h3>
+
+
+                <p data-i18n="pomodoro_description">
+
+                    Stay focused and manage your study
+                    sessions using the Pomodoro technique.
+
+                </p>
+
+
+                <button
+                    onclick="openTool('pomodoro')"
+                    data-i18n="open_tool">
+
+                    Open Tool
+
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 TODO
+            ========================== -->
+
+            <div class="tool-card">
+
+                <div class="tool-icon">
+                    ✅
+                </div>
+
+
+                <h3 data-i18n="todo_title">
+
+                    To-Do List
+
+                </h3>
+
+
+                <p data-i18n="todo_description">
+
+                    Organize your tasks, assignments,
+                    and study plans in one place.
+
+                </p>
+
+
+                <button
+                    onclick="openTool('todo')"
+                    data-i18n="open_tool">
+
+                    Open Tool
+
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 STUDY TIME
+            ========================== -->
+
+            <div class="tool-card">
+
+                <div class="tool-icon">
+                    📚
+                </div>
+
+
+                <h3 data-i18n="studytime_title">
+
+                    Study Time Calculator
+
+                </h3>
+
+
+                <p data-i18n="studytime_description">
+
+                    Calculate how much study time you need
+                    and plan your available study hours.
+
+                </p>
+
+
+                <button
+                    onclick="openTool('studytime')"
+                    data-i18n="open_tool">
+
+                    Open Tool
+
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 GRADUATION PROJECTS
+            ========================== -->
+
+            <div class="tool-card">
+
+                <div class="tool-icon">
+                    🎓
+                </div>
+
+
+                <h3 data-i18n="projects_title">
+
+                    Graduation Project Ideas
+
+                </h3>
+
+
+                <p data-i18n="projects_description">
+
+                    Explore many graduation project ideas
+                    based on your college and specialization.
+
+                </p>
+
+
+                <button
+                    onclick="openTool('projects')"
+                    data-i18n="open_tool">
+
+                    Open Tool
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         WHY US
+    ========================== -->
+
+    <section
+        id="why-us"
+        class="why-section">
+
+
+        <h2 data-i18n="why_title">
+
+            Why Student Tools?
+
+        </h2>
+
+
+        <p
+            class="section-description"
+            data-i18n="why_description">
+
+            Everything you need to organize your study
+            routine in a simple way.
+
+        </p>
+
+
+        <div class="why-container">
+
+
+            <!-- FAST -->
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    ⚡
+                </div>
+
+
+                <h3 data-i18n="why_fast_title">
+
+                    Fast & Simple
+
+                </h3>
+
+
+                <p data-i18n="why_fast_description">
+
+                    Easy-to-use tools designed to give you
+                    results quickly.
+
+                </p>
+
+            </div>
+
+
+            <!-- ORGANIZED -->
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    🎯
+                </div>
+
+
+                <h3 data-i18n="why_organized_title">
+
+                    Stay Organized
+
+                </h3>
+
+
+                <p data-i18n="why_organized_description">
+
+                    Manage your tasks, exams, grades,
+                    and study sessions in one place.
+
+                </p>
+
+            </div>
+
+
+            <!-- STUDENT FRIENDLY -->
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    💻
+                </div>
+
+
+                <h3 data-i18n="why_student_title">
+
+                    Student Friendly
+
+                </h3>
+
+
+                <p data-i18n="why_student_description">
+
+                    A clean and simple experience built
+                    with students in mind.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+
+        <p data-i18n="footer_text">
+
+            © 2026 Student Tools.
+            Built for students.
+
+        </p>
+
+
+        <div class="footer-links">
+
+
+            <a
+                href="about.html"
+                data-i18n="footer_about">
+
+                About
+
+            </a>
+
+
+            <a
+                href="privacy.html"
+                data-i18n="footer_privacy">
+
+                Privacy Policy
+
+            </a>
+
+
+            <a
+                href="contact.html"
+                data-i18n="footer_contact">
+
+                Contact
+
+            </a>
+
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT FILES
+    ========================== -->
+
+    <!-- Graduation Project Database -->
+
+    <script src="graduation-projects.js"></script>
+
+
+    <!-- Main Website JavaScript -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
